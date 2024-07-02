@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main .table {
+  background-color: orange;
+}
+.main .table__list {
+  display: grid;
+  grid-template-columns: 20vw repeat(8, 10vw);
+  align-items: center;
+  text-align: center;
+  padding: 1vh 0;
+}
+.main .accordion {
+  margin-top: 2vh;
+}
+.main .accordion__title {
+  background-color: gray;
+}
+.main .accordion__body {
+  display: grid;
+  grid-template-columns: 20vw 10vw 70vw;
+  margin-top: 2vh;
+  align-items: center;
+}
+.main .accordion__body img {
+  justify-self: center;
+}
+.main .accordion__container .accordion__list {
+  margin-left: 10%;
+}
+.main .accordion__container .accordion__list-item {
+  list-style-type: disc;
+  padding: 0;
+}
+.main .accordion__decriptions > .accordion__list {
+  display: grid;
+  grid-template-columns: repeat(7, 10vw);
+  grid-template-rows: repeat(4, 0.5fr);
+  text-align: center;
+  align-items: center;
+  margin-left: 0;
+}
+.main .accordion__decriptions > .accordion__list input {
+  width: 100%;
+}
+@media screen and (max-width: 770px) {
+  .main {
+    font-size: small;
+  }
+}
+@media screen and (min-width: 770px) {
+  .main {
+    font-size: medium;
+  }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Главная</title>
+</head>
+
+<body>
+    <header></header>
+    <main class="main">
+        <!-- Шапка таблицы -->
+        <div class="main__table table">
+            <ul class="table__list">
+                <li class="table__list-item">Найменування та характеристики</li>
+                <li class="table__list-item">Зображення</li>
+                <li class="table__list-item">Найменування база</li>
+                <li class="table__list-item">Дил2</li>
+                <li class="table__list-item">Роздріб</li>
+                <li class="table__list-item">Гарантія</li>
+                <li class="table__list-item">Наявність</li>
+                <li class="table__list-item">Замовити</li>
+                <li class="table__list-item">Сума</li>
+            </ul>
+        </div>
+        
+        <div class="main__accordion accordion">
+
+            <h1 class="accordion__title">LED лампи D серіі</h1>
+
+            <div class="accordion__body">
+                <div class="accordion__container">
+                    <ul class="accordion__list">
+                        <li class="accordion__list-item">Світловий потік: 10000 Лм ) у 3 рази світліший за стандартну галогенну лампу</li>
+                        <li class="accordion__list-item">Температура кольору: 6000К</li>
+                        <li class="accordion__list-item">Тип LED елементу: Customized CSP (спеціалізованний для роботи у лінзовій оптиці)</li>
+                        <li class="accordion__list-item">Тип охолодження: активний (радіатор з вентилятором)</li>
+                        <li class="accordion__list-item">Тип драйверу: вбудованний</li>
+                        <li class="accordion__list-item">Підключення до штатного блоку</li>
+                        <li class="accordion__list-item">Потужність: 50 Вт</li>
+                        <li class="accordion__list-item">Напруга: 9-16 В</li>
+                    </ul>
+                </div>
+                <img src="./img/D1LED1.png" alt="D1LED1">
+                <div class="accordion__decriptions">
+                    <ul class="accordion__list">
+                        <li class="accordion__list-item">D1 DLX series</li>
+                        <li class="accordion__list-item">28.00</li>
+                        <li class="accordion__list-item">2,276</li>
+                        <li class="accordion__list-item">12 м.</li>
+                        <li class="accordion__list-item">Немає</li>
+                        <li class="accordion__list-item"><input type="text"></li>
+                        <li class="accordion__list-item">0</li>
+                    </ul>
+                    <ul class="accordion__list">
+                        <li class="accordion__list-item">D2 DLX series</li>
+                        <li class="accordion__list-item">28.00</li>
+                        <li class="accordion__list-item">2,276</li>
+                        <li class="accordion__list-item">12 м.</li>
+                        <li class="accordion__list-item">Багато</li>
+                        <li class="accordion__list-item"><input type="text"></li>
+                        <li class="accordion__list-item">2655</li>
+                    </ul>
+                    <ul class="accordion__list">
+                        <li class="accordion__list-item">D3 DLX series</li>
+                        <li class="accordion__list-item">28.00</li>
+                        <li class="accordion__list-item">2,276</li>
+                        <li class="accordion__list-item">12 м.</li>
+                        <li class="accordion__list-item">Мало</li>
+                        <li class="accordion__list-item"><input type="text"></li>
+                        <li class="accordion__list-item">0</li>
+                    </ul>
+                    <ul class="accordion__list">
+                        <li class="accordion__list-item">D4 DLX series</li>
+                        <li class="accordion__list-item">28.00</li>
+                        <li class="accordion__list-item">2,276</li>
+                        <li class="accordion__list-item">12 м.</li>
+                        <li class="accordion__list-item">Багато</li>
+                        <li class="accordion__list-item"><input type="text"></li>
+                        <li class="accordion__list-item">3200</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <footer></footer>
+    <script src="js/app.min.js"></script>
+    <script>
+        // скрипт акардеона
+        var acc = document.getElementsByClassName("main__accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + 150 + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
